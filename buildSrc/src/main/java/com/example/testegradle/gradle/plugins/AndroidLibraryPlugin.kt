@@ -28,11 +28,7 @@ class AndroidLibraryPlugin : Plugin<Project> {
                 }
 
             )
-
-
-//            dependenciesConfig {
-//                desugaringDependencies()
-//            }
+            
         }
 
     private fun Project.applyPlugins() {
