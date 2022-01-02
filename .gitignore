@@ -34,7 +34,6 @@ obj/
 .idea/uiDesigner.xml
 .idea_modules/
 
-
 !/gradle/wrapper/gradle-wrapper.jar
 !/.idea/codeStyles/
 !/.idea/dictionaries/
