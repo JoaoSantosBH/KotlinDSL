@@ -1,4 +1,3 @@
-import com.example.testegradle.gradle.jitPack
 
 buildscript {
 
@@ -27,7 +26,6 @@ allprojects {
     repositories {
         google()
         mavenCentral()
-        jitPack()
         mavenLocal()
     }
 }
