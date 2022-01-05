@@ -1,24 +1,22 @@
 package com.example.testegradle.gradle
 
-import AppConfig
+import AppParams
+import AppVersions
 import Libraries
-import Versioner
 import Versions
-
+import com.android.build.gradle.BaseExtension
+import com.android.build.gradle.internal.dsl.DefaultConfig
 import org.gradle.api.Project
 import org.gradle.api.plugins.JavaPluginExtension
 import org.gradle.api.tasks.testing.Test
 import org.gradle.api.tasks.testing.TestDescriptor
 import org.gradle.api.tasks.testing.TestListener
-import com.android.build.gradle.internal.dsl.DefaultConfig
-
 import org.gradle.api.tasks.testing.TestResult
 import org.gradle.api.tasks.testing.logging.TestExceptionFormat
 import org.gradle.api.tasks.testing.logging.TestLogEvent
 import org.gradle.kotlin.dsl.DependencyHandlerScope
 import org.gradle.kotlin.dsl.dependencies
 import org.gradle.kotlin.dsl.withType
-import com.android.build.gradle.BaseExtension
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 val Project.android: BaseExtension
@@ -30,9 +28,9 @@ val Project.java: JavaPluginExtension
         ?: error("Project '$name' is not an Java module")
 
 fun Project.androidApplicationConfig(
-    appId: String = AppConfig.applicationId,
-    appVersionCode: Int = Versioner.versionCode,
-    appVersionName: String = Versioner.versionName,
+    appId: String = AppParams.applicationId,
+    appVersionCode: Int = AppVersions.versionCode,
+    appVersionName: String = AppVersions.versionName,
     defaultConfigExtensions: (DefaultConfig.() -> Unit)? = null,
     androidExtensions: (BaseExtension.() -> Unit)? = null
 ) {
@@ -52,14 +50,14 @@ fun Project.androidLibraryConfig(
     androidExtensions: (BaseExtension.() -> Unit)? = null
 ) {
     android.run {
-        compileSdkVersion(AppConfig.compileSdkVersion)
-                defaultConfig {
-                    defaultConfigExtensions?.invoke(this)
-                    minSdk = (AppConfig.minSdkVersion)
-                    targetSdk = (AppConfig.targetSdkVersion)
-                    multiDexEnabled = true
-                    testInstrumentationRunner = Libraries.android_test_runner_implementation_class
-                }
+        compileSdkVersion(AppParams.compileSdkVersion)
+        defaultConfig {
+            defaultConfigExtensions?.invoke(this)
+            minSdk = (AppParams.minSdkVersion)
+            targetSdk = (AppParams.targetSdkVersion)
+            multiDexEnabled = true
+            testInstrumentationRunner = Libraries.android_test_runner_implementation_class
+        }
 
                 buildTypes {
                     getByName("debug") {
