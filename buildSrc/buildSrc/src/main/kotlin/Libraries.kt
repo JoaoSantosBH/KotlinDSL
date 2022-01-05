@@ -27,5 +27,6 @@ object Libraries {
     const val android_test_runner_implementation_class = "androidx.test.runner.AndroidJUnitRunner"
     const val android_junit = "androidx.test.ext:junit:${Versions.android_junit}"
     const val espresso_core = "androidx.test.espresso:espresso-core:${Versions.espresso_core}"
+    const val android_test_core = "androidx.test:core:${Versions.android_test}"
 
 }

@@ -21,5 +21,6 @@ object Versions {
     // Test
     const val android_junit = "1.1.3"
     const val espresso_core = "3.4.0"
+    const val android_test = "1.3.0"
 
 }
