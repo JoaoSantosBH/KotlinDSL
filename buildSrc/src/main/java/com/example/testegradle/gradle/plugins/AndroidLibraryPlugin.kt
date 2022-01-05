@@ -1,7 +1,6 @@
 package com.example.testegradle.gradle.plugins
 
 import com.example.testegradle.gradle.androidLibraryConfig
-import com.example.testegradle.gradle.desugaringDependencies
 import org.gradle.api.Plugin
 import org.gradle.api.Project
 import org.gradle.api.tasks.testing.Test
@@ -26,9 +25,7 @@ class AndroidLibraryPlugin : Plugin<Project> {
                         }
                     }
                 }
-
             )
-            
         }
 
     private fun Project.applyPlugins() {
