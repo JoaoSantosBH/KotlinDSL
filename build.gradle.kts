@@ -1,11 +1,11 @@
 
 buildscript {
 
-    val envFile = project.rootDir.resolve("environment.properties").inputStream()
-    val envProperties = java.util.Properties().apply { envFile.use { file -> load(file) } }
+    val inputStream = project.rootDir.resolve("buildconfig.properties").inputStream()
+    val buildConfigParams = java.util.Properties().apply { inputStream.use { file -> load(file) } }
 
     mapOf(
-        "environmentProperties" to envProperties
+        "buildconfigProperties" to buildConfigParams
     ).entries.forEach {
         project.extra.set(it.key, it.value)
     }
