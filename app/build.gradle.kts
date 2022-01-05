@@ -17,7 +17,7 @@ androidApplicationConfig(
     },
     androidExtensions = {
 
-        val environmentProperties: Properties by rootProject.extra
+        val buildconfigProperties: Properties by rootProject.extra
 
         flavorDimensions("version")
 
