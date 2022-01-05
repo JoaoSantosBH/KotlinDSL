@@ -25,10 +25,15 @@ androidApplicationConfig(
 
             create("paid") {
                 dimension = "version"
+                buildConfigField("String", "baseUrl",
+                    buildconfigProperties.getProperty("paidEndpoint"))
+
             }
             create("free") {
                 dimension = "version"
                 versionNameSuffix = ".paid"
+                buildConfigField("String", "baseUrl",
+                    buildconfigProperties.getProperty("freeEndpoint"))
             }
         }
     }
