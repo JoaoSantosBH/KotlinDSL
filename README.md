@@ -1,5 +1,5 @@
 # Gerenciamento de dependências Gradle usando buildSrc e Kotlin DSL
-![enter image description here](https://cdn-images-1.medium.com/max/800/1*UEn5O8XYb-tfj9HcdlHFlg.png)
+![enter image description here](https://cdn-images-1.medium.com/max/800/1*pUmRArecQsSUPSXp_kifKQ.png)
 João Santos
 
 
