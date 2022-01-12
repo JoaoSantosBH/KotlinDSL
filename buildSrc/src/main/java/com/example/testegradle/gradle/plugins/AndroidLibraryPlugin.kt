@@ -10,7 +10,8 @@ class AndroidLibraryPlugin : Plugin<Project> {
 
     override fun apply(project: Project) =
         with(project) {
-            applyPlugins()
+
+        applyPlugins()
 
             androidLibraryConfig(
                 androidExtensions = {
