@@ -9,4 +9,4 @@ Os scripts Groovy tem uma sintaxe diferente do kotlin, não oferecem facilidades
 
 ![enter image description here](https://cdn-images-1.medium.com/max/800/1*30hN8nUZeMf0P6vaGhFXZw.png)
 
-[Artigo](https://joaomarcelo-ms.medium.com/prot%C3%B3tipo-de-maquina-injetora-para-seringa-60ml-com-arduino-6b15f981d936)
+[Artigo](https://joaomarcelo-ms.medium.com/gerenciamento-de-depend%C3%AAncias-com-gradle-plugin-e-kotlin-dsl-32696edfa0a7)
